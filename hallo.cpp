@@ -13,5 +13,11 @@ int main() {
     nama[3] = "Dewi";
     nama[4] = "Eko";
 
+    // Menampilkan isi array
+    cout << "Daftar nama:\n";
+    for (int i = 0; i < 5; i++) {
+        cout << i + 1 << ". " << nama[i] << endl;
+    }
+
     return 0;
 }
