@@ -3,19 +3,29 @@
 using namespace std;
 
 int main() {
-    // Inisialisasi array string untuk 5 nama
-    string nama[5];
+    int jumlah;
 
-    // Memasukkan 5 nama
-    nama[0] = "Andi";
-    nama[1] = "Budi";
-    nama[2] = "Citra";
-    nama[3] = "Dewi";
-    nama[4] = "Eko";
+    // Input jumlah nama yang ingin diproses
+    cout << "Masukkan jumlah nama: ";
+    cin >> jumlah;
+
+    // Validasi batas array (maks 100 nama)
+    if (jumlah > 100) {
+        cout << "Maksimum nama yang dapat dimasukkan adalah 100.\n";
+        return 1;
+    }
+
+    string nama[100]; // Menggunakan array besar agar fleksibel
+
+    // Input nama-nama
+    for (int i = 0; i < jumlah; i++) {
+        cout << "Nama ke-" << i + 1 << ": ";
+        cin >> nama[i];
+    }
 
     // Menampilkan isi array
-    cout << "Daftar nama:\n";
-    for (int i = 0; i < 5; i++) {
+    cout << "\nDaftar nama:\n";
+    for (int i = 0; i < jumlah; i++) {
         cout << i + 1 << ". " << nama[i] << endl;
     }
 
